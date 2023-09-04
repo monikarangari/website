@@ -8,11 +8,15 @@ stages {
            sh 'docker push monika1215/intelipaat:latest'} 
          } }
  stage ('docker create container on port 82')
-   {  when {
-        branch "master"
-            }
-          steps { sh 'docker run -itd -p 82:80 monika1215/intelipaat:latest'
-                  sh 'docker ps'}}
+   {  
+    //when {
+     //   branch "master"
+     //       }
+          steps { 
+           script { 
+            if (env.BRANCH_NAME = 'master' )
+                { sh 'docker run -itd -p 82:80 monika1215/intelipaat:latest'
+                  sh 'docker ps'}} }}
 
   }
 }
