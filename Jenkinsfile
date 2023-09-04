@@ -8,6 +8,7 @@ stages {
            sh 'docker push monika1215/intelipaat:latest'} 
          } }
 
+
  
   }
 }
