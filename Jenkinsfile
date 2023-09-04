@@ -7,6 +7,7 @@ stages {
           {sh 'docker build -t monika1215/intelipaat:latest .'
            sh 'docker push monika1215/intelipaat:latest'} 
          } }
-  
+
+ 
   }
 }
