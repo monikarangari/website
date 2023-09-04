@@ -12,7 +12,6 @@ stages {
  stage ('docker create container on port 82')
    {  
     when { branch 'master' }
-    input{message "build and publish from master branch"}
     steps 
        {withDockerRegistry(credentialsId: 'DockerHubAccount', url: 'https://index.docker.io/v1/')
          { sh 'docker stop myapache'
