@@ -11,7 +11,7 @@ stages {
  
  stage ('docker create container on port 82')
    {  
-    when { branch 'master' }
+    when { branch '*/master' }
  //   if (env.BRANCH_NAME == "origin/master")
     input{message "Deploy from master branch?"}
     steps 
