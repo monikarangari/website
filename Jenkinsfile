@@ -14,7 +14,7 @@ stages {
      //       }
           steps { 
            script { 
-            if (env.BRANCH_NAME = 'master' )
+            if (env.BRANCH_NAME == 'master')
                 { sh 'docker run -itd -p 82:80 monika1215/intelipaat:latest'
                   sh 'docker ps'}} }}
 
