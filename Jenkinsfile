@@ -11,7 +11,7 @@ stages {
  
  stage ('docker create container on port 82')
    {  
-    when { branch '*/master' }
+    when { branch 'origin/master' }
  //   if (env.BRANCH_NAME == "origin/master")
     steps 
        {withDockerRegistry(credentialsId: 'DockerHubAccount', url: 'https://index.docker.io/v1/')
