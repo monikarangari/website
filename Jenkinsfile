@@ -18,7 +18,7 @@ stages {
          { sh 'docker stop myapache'
            sh 'docker rm myapache' 
            sh 'docker run -itd -p 82:80 --name myapache monika1215/intelipaat:latest'
-           sh 'docker ps'}} }
+           sh 'docker ps'}} } }
 
   }
 }
