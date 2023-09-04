@@ -11,8 +11,8 @@ stages {
  
  stage ('docker create container on port 82')
    {  
-//    when { branch 'master' }
-    if (env.BRANCH_NAME == "*/master")
+    when { branch '*/master' }
+ //   if (env.BRANCH_NAME == "*/master")
     steps 
        {withDockerRegistry(credentialsId: 'DockerHubAccount', url: 'https://index.docker.io/v1/')
          { sh 'docker stop myapache'
