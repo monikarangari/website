@@ -9,9 +9,10 @@ stages {
          } }
  stage ('docker create container on port 82')
    {  when {
-        branch 'master'
+        branch "master"
             }
-          steps { sh 'docker run -itd -p 82:80 monika1215/intelipaat:latest'}}
+          steps { sh 'docker run -itd -p 82:80 monika1215/intelipaat:latest'
+                  sh 'docker ps'}}
 
   }
 }
